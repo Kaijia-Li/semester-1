@@ -17,7 +17,7 @@
 
 number1 = input("please enter the number1 : ")
 number2 = input("please enter the number2 : ")
-number = (f(number1 * number2))
+number = (number1 * number2)
 
 if number.isdigit():
     print(number)
