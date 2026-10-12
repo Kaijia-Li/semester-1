@@ -53,7 +53,7 @@ Edit the file named `task2.py`. In this file, write a program that
 
 For example, given the list
 
-    [4.5, 3.0, 1.2, 7.0, 6.3]
+    4.5 3.8 6.5 7.0 2.5
 
 Your program should print this as its output:
 
