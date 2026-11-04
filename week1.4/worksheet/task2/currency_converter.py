@@ -19,8 +19,17 @@ def currency_converter(amount, from_currency, to_currency):
     }
 
     # your code here
+    if amount < 0:
+        return 0
+    if from_currency == to_currency:
+        return amount
+    if from_currency in conversion_rate and to_currency in conversion_rate[from_currency]:
+        result = amount * conversion_rate[from_currency][to_currency]
+        return result
+    else:
+        return None
 
-    return None
+print(currency_converter(100, "GBP", "CNY"))
 
 # Submit only this file currency_converter.py with the completed function.
 

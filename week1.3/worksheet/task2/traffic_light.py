@@ -11,7 +11,20 @@ maxtime = int(input())  # read an integer number of steps (>0)
 
 state = "red"
 
-print(f"Time {systime:03} State {state}")
+cycle = sum(states.values())
+print(f"Time 000 State red")
+
+while systime < maxtime:
+    systime += 1
+    timeCycle = systime % cycle
+    lkj = 0
+    for keaton, duration in states.items():
+        lkj += duration
+        if timeCycle < lkj:
+            state = keaton
+            print(f"Time {systime:03} State {state}")
+            break
+
 
 # Simulate the traffic light system up to time=maxtime in 1-second steps
 
