@@ -6,6 +6,9 @@ class Person:
     """
     A Person, with a name and a date of birth.
     """
+
+        # Write a constructor here to create and initialize name and
+    # birth fields (see README.md for further details)
     def __init__(self,name,birth):
         if type(name) != str:
             raise TypeError
@@ -17,22 +20,19 @@ class Person:
         self.name = name
         self.birth = birth
 
+          # Implement methods initials() and is_birthday() here
+            # (see README.md for further details)
+
     def initials(self):
+        """
+        use split() to separate name
+        """
         res = ""
         for each in self.name.split():
             res += each[0].upper()
         return res
 
     def is_birthday(self):
-        return date.today() == self.birth
+        today = date.today()
+        return self.birth.month == today.month and self.birth.day == today.day
         
-        
-    # Write a constructor here to create and initialize name and
-    # birth fields (see README.md for further details)
-
-    # Implement methods initials() and is_birthday() here
-    # (see README.md for further details)
-
-
-p = Person("simon",date.today())
-print(p.name)
